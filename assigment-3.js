@@ -23,20 +23,45 @@
 
 //?cevap1
  //const fiyatlar = [100, 250, 50, 89];
- //console.log(fiyatlar.forEach((v) => v + (v / 100) * 10));//!ibretlik DİKKAT forEach void func.'dur undefined döner.
- //! 1.yöntem toplam zamlı
+ //console.log(fiyatlar.forEach((v) => v + (v / 100) * 10));//! DİKKAT forEach void func.'dur undefined döner.
+
+//!DİZİYİ DEĞİRİREREK ÇÖZÜM DİKKAAAT
+// const fiyatlar = [100, 250, 50, 89];
+// fiyatlar.forEach((v,i,arr)=>{
+//     return arr[i]=v*1.1
+// })
+// console.log(fiyatlar);
+
+//!DİZİYİ DEĞİRİREREK ÇÖZÜM + Math.floor
+// fiyatlar.forEach((value, i, arr) => {
+//   arr[i] = Math.floor(value * 1.1);
+// });
+// console.log(fiyatlar);
+
+
+
+
+ //! diziyi değiştirmeden çözüm 
 //  let total=0
 //  fiyatlar.forEach((v) => total+=(v+(v / 100) * 10));
 //  console.log(total);
- //!2.yöntem tek tek zmalı
 
-//   fiyatlar.forEach((v) => console.log((v + (v / 100) * 10)));
+
+ //! diziyi değiştirmeden çözüm 
+//   const fiyatlar = [100, 250, 50, 89];
+//   fiyatlar.forEach((v) => console.log(Math.floor(v + (v / 100) * 10)));
+
+
+
 
 
 //?cevap2
 // const fiyatlar = [100, 250, 50, 89];
 // fiyatlar.forEach((v) => v>90 && console.log(v));
 // fiyatlar.forEach((v) => v < 90 || console.log(v));
+//!Başka çözüm (filter ile)
+// const fiyatlar = [100, 250, 50, 89];
+// fiyatlar.filter((x) => x >= 90).forEach((x) => console.log(x));
 
 //?cevap3
 // const fiyatlar = [100, 250, 50, 89];
@@ -57,7 +82,15 @@
 // })
 // console.log(sepe);
 
-//?cavap5
+//!başka çözüm (filter+map)
+// const maaslar = [3000, 5000, 4000, 6000, 6500];
+// const eksi4000 = maaslar
+//   .filter((maas) => maas < 4000)
+//   .map((zam) => Math.floor(zam * 1.5));
+// console.log(eksi4000);
+
+
+//?cevap5
 //!1.yöntem
 // const maaslar = [3000, 5000, 4000, 6000, 6500];
 // let sep=maaslar.map((v)=>v>4000 && v+v*0.25);
@@ -72,12 +105,24 @@
 // })
 // console.log(sepe);
 
+//!başka çözüm()
+//?tek tek yazdırmalı filter+map+forEach
+// const maaslar = [3000, 5000, 4000, 6000, 6500];
+//   maaslar.filter((x) => x > 4000)
+//   .map((x) => x + x / 4)
+//   .forEach((x) => console.log(x));
+
+ // ? ayrı bir dizide saklamak istersek filter+map
+// const artı4000 = maaslar.filter((maas) => maas > 4000)
+//   .map((maas) => Math.floor(maas * 1.25));
+// console.log(artı4000);
 
 //?cevap6
 // const maaslar = [3000, 5000, 4000, 6000, 6500];
 
 
 //? forEach yöntemi ile
+// const maaslar = [3000, 5000, 4000, 6000, 6500];
 // let total=0
 // maaslar.forEach((v)=>console.log(total+=v))
 
