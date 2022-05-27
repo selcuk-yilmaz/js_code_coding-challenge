@@ -22,7 +22,7 @@
 // Maaslarin toplamini hem forEach ile hem de reduce methodu ile çözünüz.
 
 //?cevap1
- //const fiyatlar = [100, 250, 50, 89];
+//  const fiyatlar = [100, 250, 50, 89];
  //console.log(fiyatlar.forEach((v) => v + (v / 100) * 10));//! DİKKAT forEach void func.'dur undefined döner.
 
 //!DİZİYİ DEĞİRİREREK ÇÖZÜM DİKKAAAT
@@ -33,6 +33,7 @@
 // console.log(fiyatlar);
 
 //!DİZİYİ DEĞİRİREREK ÇÖZÜM + Math.floor
+
 // fiyatlar.forEach((value, i, arr) => {
 //   arr[i] = Math.floor(value * 1.1);
 // });
@@ -122,9 +123,10 @@
 
 
 //? forEach yöntemi ile
-// const maaslar = [3000, 5000, 4000, 6000, 6500];
-// let total=0
-// maaslar.forEach((v)=>console.log(total+=v))
+const maaslar = [3000, 5000, 4000, 6000, 6500];
+let total=0
+// maaslar.forEach((v)=>console.log(total+=v));
+maaslar.forEach((v) => total += v);
 
 //?reduce yöntemi
 // const toplam=maaslar.reduce((x,y)=>x+y);
