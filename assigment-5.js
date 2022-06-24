@@ -30,17 +30,20 @@
 // }
 // console.log(count);
 
-function countDigits(d, l, h) {
-  let count = 0;
-  if (d >= 0 && d < 10 && l > 0 && l < h) { 
-    for (let i = l; i <= h; i++) {
-      for (let j = 0; j < 2; j++) {
-        d == i.toString().charAt(j) && count++;
-      }
-    }
-  } else {
-    return -1;
-  }
-  return count
-}
-console.log(countDigits(1,3,2));
+
+
+//!çözüm senn
+// function countDigits(d, l, h) {
+//   let count = 0;
+//   if (d >= 0 && d < 10 && l > 0 && l < h) { 
+//     for (let i = l; i <= h; i++) {
+//       for (let j = 0; j < 2; j++) {
+//         d == i.toString().charAt(j) && count++;
+//       }
+//     }
+//   } else {
+//     return -1;
+//   }
+//   return count
+// }
+// console.log(countDigits(1,3,2));
